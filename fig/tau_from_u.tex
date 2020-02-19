@@ -33,8 +33,8 @@
 			% xmax=11,
 			% ymin=0,
 			% ymax=5,
-			xlabel={$\Delta X$, см},
-			ylabel={$I_\text{д}$, мА},
+			xlabel={$U$, В},
+			ylabel={$t_2-t_1$, мкс},
 			tick style={very thick},
 		    % scale=0.5,
 		    grid=both,
@@ -90,7 +90,9 @@
 		]
 	     % \xdef\C{5e-8}
 	     % \xdef\R{13000}
-		\addplot +[mark=*, line width=1.2pt, mark size=1.5pt, solid,blue] plot [error bars/.cd, y dir = both, y explicit] table [ x=Dx, y=e2, ] {../data/ex2.tsv};
+		\addplot +[mark=*, line width=1.2pt, mark size=1.1pt,  only marks,solid,blue] plot [error bars/.cd, y dir = both, y explicit] table [ x=u, y=tau, ] {../data/ex1.tsv};
+
+		  \addplot [samples=100, line width=1pt, domain=1015:2100, blue!50!black] {780/(1+e^(-0.011*(x-985)))-400+(x-1000)*0.03};
 		% \addlegendentry{$U_\text{рез}=150$ В}
 		% \addplot +[mark=square*, line width=1.2pt, mark size=3pt, solid,red] plot [error bars/.cd, y dir = both, y explicit] table [ x=ip, y=id, ] {../data/5a2.tsv};\addlegendentry{$U_\text{рез}=120$ В}
 		% \addplot +[mark=triangle*, line width=1.2pt, mark size=3pt, solid,magenta] plot [error bars/.cd, y dir = both, y explicit] table [ x=ip, y=id, ] {../data/5a3.tsv};\addlegendentry{$U_\text{рез}=\hphantom{1}90$ В}
