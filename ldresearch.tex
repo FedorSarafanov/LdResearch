@@ -245,6 +245,44 @@
   \delta t \approx 6.5\text{ мкс}.
 \end{equation}
 \subsection{Расчет численных величин}
+\paragraph{Сечение лазерного перехода $\sigma_{\text{изл}}$.}%
+В соответствии с формулой $(6)$ в методичке
+\begin{equation}
+    \sigma_{\text{изл}} = \frac{\lambda^4}{8 \pi c n^2 \tau_{\text{сп} } \delta
+    \lambda} = 1.53 \cdot 10^{-19} \text{ см}^2
+\end{equation}
+
+
+\paragraph{Пороговая разность населенностей $\Delta N_{\text{пор}}$.}%
+См. $(23)$ в методичке
+ \begin{gather}
+     \Delta N_{\text{пор}}  = \frac{ 8 \pi c n^2 \tau_{\text{cп}} \delta
+     \lambda}{\lambda^4} \qty[K_{\text{п}} - \frac{1}{l} \ln{\sqrt{R_{1}
+     R_{2}}}] = \frac{ K_{\text{п} }-
+ \frac{1}{l}\ln\sqrt{R_{1}R_{2}}}{\sigma_{\text{изл}}} \\
+ = \frac{0.1 \text{ см}^{-1} - 0.1 \text{ см}^{-1} \ln \sqrt{0.998\cdot
+ 0.92}}{1.53 \cdot 10^{-19} \text{ см}^2} = 0.68 \cdot 10^{19} \text{ см}^{-3}.
+\end{gather}
+
+\paragraph{Пороговую энергию накачки $E_{\text{пор}}$.}%
+\begin{gather}
+    E_{\text{пор}} = \frac{C U^2_{\text{пор}}}{2} \cdot 0.4 \cdot 0.1  =
+    \frac{400 \cdot 10^{-6} \text{ Ф} \cdot 10^{6} \text{ В}^{2}}{2} \cdot 0.04
+    = 8 \text{ Дж}.
+\end{gather}
+
+\paragraph{Показатель усиления рабочей среды. }%
+\begin{gather}
+    K_{\text{усил}} = \sigma \Delta N = 1.04 \text{ см}^{-1}
+\end{gather}
+
+
+%\paragraph{Сравнение практически полученной величины энергии накачки с
+%теоретической.}%
+
+
+
+
 
 
 \addcontentsline{toc}{section}{Заключение}
